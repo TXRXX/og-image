@@ -142,18 +142,17 @@ const markdownOptions: DropdownOption[] = [
 ];
 
 const imageLightOptions: DropdownOption[] = [
-    { text: 'Pickyzz', value: 'https://raw.githubusercontent.com/pickyzz/pickyzz-blog/ed899141e14c502917358a01dc24ae551516a801/public/favicon.svg' },
     { text: 'Vercel', value: 'https://assets.vercel.com/image/upload/front/assets/design/vercel-triangle-black.svg' },
     { text: 'Next.js', value: 'https://assets.vercel.com/image/upload/front/assets/design/nextjs-black-logo.svg' },
     { text: 'Hyper', value: 'https://assets.vercel.com/image/upload/front/assets/design/hyper-color-logo.svg' },
+    { text: 'Pickyzz', value: 'https://raw.githubusercontent.com/pickyzz/pickyzz-blog/ed899141e14c502917358a01dc24ae551516a801/public/favicon.svg' },
 ];
 
 const imageDarkOptions: DropdownOption[] = [
-
-    { text: 'Pickyzz', value: 'https://raw.githubusercontent.com/pickyzz/pickyzz-blog/ed899141e14c502917358a01dc24ae551516a801/public/favicon.svg' },
     { text: 'Vercel', value: 'https://assets.vercel.com/image/upload/front/assets/design/vercel-triangle-white.svg' },
     { text: 'Next.js', value: 'https://assets.vercel.com/image/upload/front/assets/design/nextjs-white-logo.svg' },
     { text: 'Hyper', value: 'https://assets.vercel.com/image/upload/front/assets/design/hyper-bw-logo.svg' },
+    { text: 'Pickyzz', value: 'https://raw.githubusercontent.com/pickyzz/pickyzz-blog/ed899141e14c502917358a01dc24ae551516a801/public/favicon.svg' },
 ];
 
 const widthOptions = [
