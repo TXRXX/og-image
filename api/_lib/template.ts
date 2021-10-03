@@ -8,6 +8,7 @@ const twOptions = { folder: 'svg', ext: '.svg' };
 const emojify = (text: string) => twemoji.parse(text, twOptions);
 
 const rglr = readFileSync(`${__dirname}/../_fonts/Inter-Regular.woff2`).toString('base64');
+const noto = readFileSync(`${__dirname}/../_fonts/NotoSansThai-Black.ttf`).toString('base64');
 const bold = readFileSync(`${__dirname}/../_fonts/Inter-Bold.woff2`).toString('base64');
 const mono = readFileSync(`${__dirname}/../_fonts/Vera-Mono.woff2`).toString('base64');
 
@@ -42,6 +43,13 @@ function getCss(theme: string, fontSize: string) {
         font-weight: normal;
         src: url(data:font/woff2;charset=utf-8;base64,${mono})  format("woff2");
       }
+
+    @font-face {
+        font-family: 'Noto Sans Thai';
+        font-style: normal;
+        font-weight: normal;
+        src: url(data:font/otf;charset=utf-8;base64,${noto}) format('truetype');
+    }
 
     body {
         background: ${background};
@@ -95,7 +103,7 @@ function getCss(theme: string, fontSize: string) {
     }
     
     .heading {
-        font-family: 'Inter', sans-serif;
+        font-family: 'Inter', 'Noto Sans Thai', sans-serif;
         font-size: ${sanitizeHtml(fontSize)};
         font-style: normal;
         color: ${foreground};
