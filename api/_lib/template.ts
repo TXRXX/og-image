@@ -7,9 +7,8 @@ const twemoji = require('twemoji');
 const twOptions = { folder: 'svg', ext: '.svg' };
 const emojify = (text: string) => twemoji.parse(text, twOptions);
 
-const rglr = readFileSync(`${__dirname}/../_fonts/Inter-Regular.woff2`).toString('base64');
-const noto = readFileSync(`${__dirname}/../_fonts/NotoSansThai-Black.ttf`).toString('base64');
-const bold = readFileSync(`${__dirname}/../_fonts/Inter-Bold.woff2`).toString('base64');
+const rglr = readFileSync(`${__dirname}/../_fonts/Maitree-Regular.ttf`).toString('base64');
+const bold = readFileSync(`${__dirname}/../_fonts/Maitree-Bold.ttf`).toString('base64');
 const mono = readFileSync(`${__dirname}/../_fonts/Vera-Mono.woff2`).toString('base64');
 
 function getCss(theme: string, fontSize: string) {
@@ -24,17 +23,17 @@ function getCss(theme: string, fontSize: string) {
     }
     return `
     @font-face {
-        font-family: 'Inter';
+        font-family: 'Maitree';
         font-style:  normal;
         font-weight: normal;
-        src: url(data:font/woff2;charset=utf-8;base64,${rglr}) format('woff2');
+        src: url(data:font/woff2;charset=utf-8;base64,${rglr}) format('truetype');
     }
 
     @font-face {
-        font-family: 'Inter';
+        font-family: 'Maitree';
         font-style:  normal;
         font-weight: bold;
-        src: url(data:font/woff2;charset=utf-8;base64,${bold}) format('woff2');
+        src: url(data:font/woff2;charset=utf-8;base64,${bold}) format('truetype');
     }
 
     @font-face {
@@ -43,13 +42,6 @@ function getCss(theme: string, fontSize: string) {
         font-weight: normal;
         src: url(data:font/woff2;charset=utf-8;base64,${mono})  format("woff2");
       }
-
-    @font-face {
-        font-family: 'Noto Sans Thai';
-        font-style: normal;
-        font-weight: normal;
-        src: url(data:font/otf;charset=utf-8;base64,${noto}) format('truetype');
-    }
 
     body {
         background: ${background};
@@ -103,7 +95,7 @@ function getCss(theme: string, fontSize: string) {
     }
     
     .heading {
-        font-family: 'Inter', 'Noto Sans Thai', sans-serif;
+        font-family: 'Maitree', sans-serif;
         font-size: ${sanitizeHtml(fontSize)};
         font-style: normal;
         color: ${foreground};
